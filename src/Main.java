@@ -19,7 +19,12 @@ public class Main {
                 case 1:
                     System.out.print("Enter book name: ");
                     String book = scanner.nextLine();
-                    manager.addBook(book);
+                    if (book.equalsIgnoreCase("Sahana")) {
+                        manager.addBook(String.valueOf(new Book("Java Book1", "Test1", 1970)));
+                    }
+                    else {
+                        manager.addBook(String.valueOf(new Book("Other", "Test2", 1972)));
+                    }
                     break;
                 case 2:
                     manager.viewBooks();
